@@ -1,0 +1,13 @@
+.timer {
+  border-radius: 10px;
+  border: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.timerTitle {
+  height: 12%;
+  text-align: center;
+  vertical-align: middle;
+}

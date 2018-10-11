@@ -1,0 +1,144 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Clock5.aspx.cs" Inherits="SDD_Clock_ASP.Clock5" %>
+
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Transitional//EN" >
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
+<head id="Head1" runat="server">
+<link rel="stylesheet" type="text/css" href="/skydiveclock.css" />
+    <title>Skydive Spaceland Houston Load Clock</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<%--    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />--%>
+    <meta name="apple-mobile-web-app-title" content="Houston Clock">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="logo-120x120.png">
+<link rel="apple-touch-icon" sizes="58x58" href="logo-58x58.png">
+<link rel="apple-touch-icon" sizes="80x80" href="logo-80x80.png">
+<link rel="apple-touch-icon" sizes="87x87" href="logo-87x87.png">
+<link rel="apple-touch-icon" sizes="120x120" href="logo-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="logo-152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="logo-167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="logo-180x180.png">
+<link rel="apple-touch-startup-image" href="/logostartup-320x480.png">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-812267-10"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-812267-10');
+</script>
+
+
+
+
+
+</head>
+<body bgcolor="black" style="height: 100%;" onload="startSkydiveClockTimer();" alink="#ffffff" link="#ffffff" vlink="#ffffff">
+     <form id="form1" runat="server" submitdisabledcontrols="True"  >
+
+
+
+
+
+<div id="skydiveclock">
+    <div id="clock" class="skydiveclock">
+
+		<div id="tm1" class="timer watermark" style="background-color:#0000FF; color:#FFFFFF">
+
+		</div>
+		<div id="tm2" class="timer watermark" style="background-color:#000000; color:#FFFF00">
+
+		</div>
+		<div id="tm3" class="timer watermark" style="background-color:#DDDDFF; color:#000000">
+
+		</div>
+		<div id="tm4" class="timer watermark" style="background-color:#FF0000; color:#FFFFFF">
+
+		</div>
+        <div id="tm0" class="timer watermark0" style="background-color:transparent; color:transparent">
+
+		</div>
+        <div id="weathersection" class="weatherSection">
+         <a href="wind31.aspx">
+           <div id = "windDirection" class="col4">
+			    <div id="compass" class="compass" >
+                     <svg xmlns="http://www.w3.org/2000/svg" id="svg_compass" viewbox="0,0,135,135" class="svg-content" width="97%" height="97%">
+	                    <g>
+		                    <title>Skydive Wind Compass</title>
+		                    <g id="g11">
+			                    <circle cx="67" cy="67" r="65" stroke="blue" stroke-width="2" fill="black" id="svg_1"/>
+			                    <line x1="21" y1="21" x2="26" y2="26" stroke="blue" stroke-width="3" id="svg_nw"/>
+			                    <line x1="21" y1="113" x2="26" y2="108" stroke="blue" stroke-width="3" id="svg_sw"/>
+			                    <line x1="113" y1="113" x2="108" y2="108" stroke="blue" stroke-width="3" id="svg_se"/>
+			                    <line x1="112" y1="21" x2="107" y2="26" stroke="blue" stroke-width="3" id="svg_ne"/>
+			                    <line x1="8" y1="42" x2="11" y2="44" stroke="blue" stroke-width="2" id="svg_wnw"/>
+			                    <line x1="43" y1="7" x2="45" y2="11" stroke="blue" stroke-width="2" id="svg_nnw"/>
+			                    <line x1="7" y1="92" x2="10" y2="90" stroke="blue" stroke-width="2" id="svg_wsw"/>
+			                    <line x1="91" y1="7" x2="89" y2="11" stroke="blue" stroke-width="2" id="svg_nne"/>
+			                    <line x1="42" y1="126" x2="44" y2="123" stroke="blue" stroke-width="2" id="svg_ssw"/>
+			                    <line x1="126" y1="42" x2="123" y2="44" stroke="blue" stroke-width="2" id="svg_ene"/>
+			                    <line x1="92" y1="126" x2="90" y2="123" stroke="blue" stroke-width="2" id="svg_sse"/>
+			                    <line x1="126" y1="92" x2="123" y2="90" stroke="blue" stroke-width="2" id="svg_ese"/>
+			                    <line x1="67" y1="2" x2="67" y2="12" stroke="blue" stroke-width="3" id="svg_n"/>
+			                    <line x1="67" y1="132" x2="67" y2="122" stroke="blue" stroke-width="3" id="svg_s"/>
+			                    <line x1="132" y1="67" x2="122" y2="67" stroke="blue" stroke-width="3" id="svg_e"/>
+			                    <line x1="2" y1="67" x2="12" y2="67" stroke="blue" stroke-width="3" id="svg_w"/>
+			                    <g id="g_dir">
+
+			                    </g>
+			                    <text font-size="15" font-family="Sans-serif" x="61" y="27" fill="white" id="svg_3">N</text>
+			                    <text font-size="15" font-family="Sans-serif" x="62" y="117" fill="white" id="svg_5">S</text>
+			                    <text font-size="15" font-family="Sans-serif" x="110" y="72" fill="white" id="svg_7">E</text>
+			                    <text font-size="15" font-family="Sans-serif" x="14" y="72" fill="white" id="svg_9">W</text>
+
+			                    <circle fill="#000000" stroke="#000000" cx="67" cy="67" r="33" id="svg_cwindbg"/>
+			                    <text fill="#000000" stroke="#000000" stroke-width="0" x="67" y="82" id="svg_cwind" font-size="48" font-family="Sans-serif" text-anchor="middle">00</text>
+		                    </g>
+	                    </g>
+                    </svg>
+
+			    </div>
+                <div id="compassText" class="compassHeading"></div>
+
+               <!--   -->
+
+
+
+
+		    </div>
+
+
+            <div id = "weatherSummary" class="col2">
+                <div id="summaryWeather" class="weatherText"></div>
+			    <div id="summary5" class="weatherText bubble" ></div>
+                <div id="summary10" class="weatherText bubble" ></div>
+                <div id="summary20" class="weatherText bubble" ></div>
+                <div id="summaryLastLoad" class="loadsummary bubble"></div>
+            </div>
+            <div id="summaryTime" class="lastupdate bubble col3"></div>
+            </a>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+    </form>
+
+    <script type="text/javascript" language="javascript" src="/jquery-1.8.2.min.js"></script>
+   <script type="text/javascript" language="javascript" src="/clock5java.js"></script>
+
+
+
+</body>
+</html>
