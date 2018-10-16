@@ -27,7 +27,7 @@ const Compass = ({winds}) =>
             <g id="g_dir">
 
             </g>
-            <text fontSize="15" fontFamily="Sans-serif" x="61" y="27" fill="white" id="svg_3">N</text>
+            <text fontSize="15" fontFamily="Sans-serif" x="62" y="27" fill="white" id="svg_3">N</text>
             <text fontSize="15" fontFamily="Sans-serif" x="62" y="117" fill="white" id="svg_5">S</text>
             <text fontSize="15" fontFamily="Sans-serif" x="110" y="72" fill="white" id="svg_7">E</text>
             <text fontSize="15" fontFamily="Sans-serif" x="14" y="72" fill="white" id="svg_9">W</text>

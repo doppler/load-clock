@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     console.log(this.state.data)
     return (
-      <div className="skydiveclock">
+      <div className="App">
         {
           this.state.data.timers.length > 0 ? <Timers timers={this.state.data.timers}/> : <BigLogo/>
         }
