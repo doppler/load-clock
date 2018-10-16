@@ -18,15 +18,15 @@ class App extends Component {
         ...prevState,
         winds: {
           ...prevState.winds,
-          direction: prevState.winds.direction + 6,
+          direction: prevState.winds.direction + 1,
           speed: prevState.winds.speed + 1,
-        }
+        },
+        prevWindDirections: [prevState.winds.direction, ...this.state.prevWindDirections].slice(0, 240)
       }))
     }, 1000)
   }
 
   render() {
-    // console.log(this.state)
     return (
       <div className="App">
         {

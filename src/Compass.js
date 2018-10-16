@@ -1,7 +1,7 @@
 import React from 'react'
 import ArrowNode from './ArrowNode'
 
-const Compass = ({winds}) => {
+const Compass = ({winds, prevWindDirections}) => {
   let windTextFgColor = "white";
   let windTextBgColor = "black";
 
@@ -32,7 +32,9 @@ const Compass = ({winds}) => {
             <line x1="132" y1="67" x2="122" y2="67" stroke="blue" strokeWidth="3" id="svg_e"/>
             <line x1="2" y1="67" x2="12" y2="67" stroke="blue" strokeWidth="3" id="svg_w"/>
 
-            <ArrowNode direction={winds.direction}/>
+            {prevWindDirections.map((direction, index) => {
+              return <ArrowNode key={index} direction={direction} index={index}/>
+            })}
 
             <text fontSize="15" fontFamily="Sans-serif" x="62" y="27" fill="white" id="svg_3">N</text>
             <text fontSize="15" fontFamily="Sans-serif" x="62" y="117" fill="white" id="svg_5">S</text>

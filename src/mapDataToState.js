@@ -83,7 +83,8 @@ const mapDataToState = (data) => {
     timers,
     winds,
     weather,
-    loadsFlownToday
+    loadsFlownToday,
+    prevWindDirections: []
   }
   return organizedData
 }
