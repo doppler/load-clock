@@ -22,6 +22,24 @@ body {
   border-radius: 10px;
   opacity: 0.7;
   flex: 1;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.LoadTimer > div {
+  padding: 1vh;
+  border: 1px solid white;
+}
+.LoadTimer > .title {
+  font-weight: bold;
+}
+.LoadTimer > .time {
+  flex: 1;
+  text-align: center;
+  font-size: 3em;
+}
+.LoadTimer > .slots {
+  text-align: right;
 }
 .WeatherSection {
   position: fixed;
