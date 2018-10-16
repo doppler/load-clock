@@ -1,6 +1,7 @@
 import React from 'react';
 import Compass from './Compass'
 import WeatherSummary from './WeatherSummary'
+import './WeatherSection.css'
 
 const WeatherSection = ({winds, weather, loadsFlownToday}) =>
   <div className="WeatherSection">

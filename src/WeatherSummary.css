@@ -1,0 +1,7 @@
+.WeatherSummary {
+  flex: 1;
+  margin-left: 1vh;
+}
+.WeatherSummary > div {
+  margin: 1vh;
+}
