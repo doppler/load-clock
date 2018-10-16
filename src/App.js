@@ -4,7 +4,7 @@ import data from './data.json';
 import mapDataToState from './mapDataToState'
 import Timers from './Timers'
 import BigLogo from './BigLogo'
-import Compass from './Compass'
+import WeatherSection from './WeatherSection'
 
 class App extends Component {
   constructor() {
@@ -12,7 +12,9 @@ class App extends Component {
     this.state = {
       data: {
         timers: [],
-        currentWind: 0
+        winds: {},
+        weather: {},
+        loadsFlownToday: 0
       }
     }
   }
@@ -27,11 +29,11 @@ class App extends Component {
   render() {
     console.log(this.state.data)
     return (
-      <div className="App">
+      <div className="skydiveclock">
         {
           this.state.data.timers.length > 0 ? <Timers timers={this.state.data.timers}/> : <BigLogo/>
         }
-        <Compass currentWind={this.state.data.currentWind}/>
+        <WeatherSection {...this.state.data}/>
       </div>
     );
   }

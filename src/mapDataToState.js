@@ -27,6 +27,23 @@ const mapDataToState = (data) => {
     tm1_slots, tm2_slots, tm3_slots, tm4_slots,
     ...rest
   ] = data;
+
+  const loadsFlownToday = lastLoadName;
+
+  const winds = {
+    direction: windDir,
+    speed: currentWind,
+    high_5min: h5,
+    high_10min: h10,
+    high_20min: h20
+  }
+
+  const weather = {
+    temp,
+    heatindex,
+    windDirString
+  }
+
   const timers = [
     {
       enabled: tm1_enabled === "True",
@@ -64,7 +81,9 @@ const mapDataToState = (data) => {
 
   const organizedData = {
     timers,
-    currentWind
+    winds,
+    weather,
+    loadsFlownToday
   }
   return organizedData
 }
