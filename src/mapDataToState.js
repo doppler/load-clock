@@ -31,11 +31,11 @@ const mapDataToState = (data) => {
   const loadsFlownToday = lastLoadName;
 
   const winds = {
-    direction: windDir,
-    speed: currentWind,
-    high_5min: h5,
-    high_10min: h10,
-    high_20min: h20
+    direction: Math.floor(windDir),
+    speed: Math.floor(currentWind),
+    high_5min: Math.floor(h5),
+    high_10min: Math.floor(h10),
+    high_20min: Math.floor(h20)
   }
 
   const weather = {

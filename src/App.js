@@ -9,31 +9,30 @@ import WeatherSection from './WeatherSection'
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      data: {
-        timers: [],
-        winds: {},
-        weather: {},
-        loadsFlownToday: 0
-      }
-    }
+    this.state = mapDataToState(data.d)
   }
 
   componentDidMount() {
-    const organizedData = mapDataToState(data.d)
-    this.setState({
-      data: organizedData
-    })
+    window.setInterval(() => {
+      this.setState(prevState => ({
+        ...prevState,
+        winds: {
+          ...prevState.winds,
+          direction: prevState.winds.direction + 6,
+          speed: prevState.winds.speed + 1,
+        }
+      }))
+    }, 1000)
   }
 
   render() {
-    console.log(this.state.data)
+    // console.log(this.state)
     return (
       <div className="App">
         {
-          this.state.data.timers.length > 0 ? <Timers timers={this.state.data.timers}/> : <BigLogo/>
+          this.state.timers.length > 0 ? <Timers timers={this.state.timers}/> : <BigLogo/>
         }
-        <WeatherSection {...this.state.data}/>
+        <WeatherSection {...this.state}/>
       </div>
     );
   }

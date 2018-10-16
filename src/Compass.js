@@ -10,7 +10,7 @@ const Compass = ({winds}) => {
 
   return (
     <div className="Compass">
-      <svg xmlns="http://www.w3.org/2000/svg" id="svg_compass" viewBox="0,0,135,135" className="svg-content" width="" height="">
+      <svg xmlns="http://www.w3.org/2000/svg" id="svg_compass" viewBox="0,0,135,135" className="svg-content">
         <g>
           <title>Skydive Wind Compass</title>
           <g id="g11">
