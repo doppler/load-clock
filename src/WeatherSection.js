@@ -6,8 +6,8 @@ import './WeatherSection.css'
 
 const WeatherSection = ({winds, weather, loadsFlownToday}) =>
   <div className="WeatherSection">
-    <WindInfo winds={winds}/>
     <Compass winds={winds}/>
+    <WindInfo winds={winds}/>
     <WeatherSummary weather={weather} winds={winds} loadsFlownToday={loadsFlownToday} />
   </div>
 

@@ -1,24 +1,17 @@
 .WeatherSection {
-  position: fixed;
-  height: 21vh;
+  height: 25vh;
   display: flex;
   margin-top: 1vh;
-  width: 97vh;
+  width: 100%;
 }
 .WeatherSection > .WindInfo,
 .WeatherSection > .Compass,
 .WeatherSection > .WeatherSummary {
-  /* height: 100%; */
   background-color: black;
-  border-radius: 10px;
-  border: 1px solid white;
   color: white;
   opacity: 0.7;
   font-weight: bold;
-  margin-left: 1vh;
   flex: 1;
-  width: 33%;
-  min-width: 33%;
 }
 .WeatherSummary {
 }
