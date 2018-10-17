@@ -3,7 +3,6 @@ import './App.css';
 import data from './data.json';
 import mapDataToState from './mapDataToState'
 import Timers from './Timers'
-import BigLogo from './BigLogo'
 import WeatherSection from './WeatherSection'
 
 class App extends Component {
@@ -29,9 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {
-          this.state.timers.length > 0 ? <Timers timers={this.state.timers}/> : <BigLogo/>
-        }
+        <Timers timers={this.state.timers}/>
         <WeatherSection {...this.state}/>
       </div>
     );

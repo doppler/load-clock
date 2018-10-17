@@ -10,6 +10,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+.BigLogo {
+  background-image: url('./logo.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  flex: 1;
+}
 .LoadTimer {
   margin: 1vh 1vh 0 1vh;
   border: 1px solid white;

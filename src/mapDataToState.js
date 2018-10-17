@@ -46,7 +46,7 @@ const mapDataToState = (data) => {
 
   const timers = [
     {
-      enabled: tm1_enabled === "True",
+      enabled: tm1_enabled.toLowerCase() === "true",
       load: tm1_load,
       time: tm1_timer,
       slots: tm1_slots,
