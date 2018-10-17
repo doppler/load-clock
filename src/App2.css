@@ -1,0 +1,79 @@
+html, body {
+  height: 100%;
+}
+body {
+  background-image: url('./SDD-General.png');
+  background-size: cover;
+}
+
+.Timers {
+  height: 73vh;
+  display: flex;
+  flex-direction: column;
+}
+.LoadTimer {
+  margin: 1vh 1vh 0 1vh;
+  border: 1px solid white;
+  border-radius: 10px;
+  opacity: 0.7;
+  flex: 1;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.LoadTimer > div {
+  padding: 1vh;
+  border: 1px solid white;
+}
+.LoadTimer > .title {
+  font-weight: bold;
+}
+.LoadTimer > .time {
+  flex: 1;
+  text-align: center;
+  font-size: 3em;
+}
+.LoadTimer > .slots {
+  text-align: right;
+}
+.WeatherSection {
+  height: 25vh;
+  display: flex;
+  margin-top: 1vh;
+  width: 100%;
+}
+.WeatherSection > .WindInfo,
+.WeatherSection > .Compass,
+.WeatherSection > .WeatherSummary {
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  font-weight: bold;
+  flex: 1;
+}
+.WeatherSummary {
+}
+.WeatherSummary {
+  /* flex: 1; */
+  /* margin-left: 1vh; */
+}
+.WeatherSummary > div {
+  /* margin: 1vh; */
+}
+.WindInfo {
+  padding: 1vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

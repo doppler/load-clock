@@ -1,5 +1,5 @@
 import React from 'react';
-import './WindInfo.css';
+// import './WindInfo.css';
 
 const directionStringFromDirection = (direction) => {
   const dirs = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import './BigLogo.css'
+// import './BigLogo.css'
 
 const BigLogo = () =>
   <div className="BigLogo timer">
