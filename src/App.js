@@ -12,17 +12,29 @@ class App extends Component {
   }
 
   componentDidMount() {
-    window.setInterval(() => {
-      this.setState(prevState => ({
-        ...prevState,
-        winds: {
-          ...prevState.winds,
-          direction: prevState.winds.direction + 1,
-          speed: prevState.winds.speed + 1,
-        },
-        prevWindDirections: [prevState.winds.direction, ...this.state.prevWindDirections].slice(0, 240)
-      }))
-    }, 1000)
+    fetch("http://houston.spacelandclock.com/clock5.aspx/getTimerInfo", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      body: JSON.stringify({param:"data",db:"Houston"})
+
+    })
+    .then(response => response.json())
+    .then(json => this.setState(mapDataToState(json.d)))
+
+    // window.setInterval(() => {
+    //   this.setState(prevState => ({
+    //     ...prevState,
+    //     winds: {
+    //       ...prevState.winds,
+    //       direction: prevState.winds.direction + 1,
+    //       speed: prevState.winds.speed + 1,
+    //     },
+    //     prevWindDirections: [prevState.winds.direction, ...this.state.prevWindDirections].slice(0, 240)
+    //   }))
+    // }, 1000)
   }
 
   render() {
