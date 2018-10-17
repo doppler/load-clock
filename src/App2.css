@@ -52,11 +52,11 @@ body {
 .svg-content {
   height: 95%;
 }
-.WeatherSummary {
+.Summary {
 }
-.WeatherSummary {
+.Summary {
 }
-.WeatherSummary > div {
+.Summary > div {
 }
 .WindInfo {
   padding: 1vh;
