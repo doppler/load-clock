@@ -1,35 +1,70 @@
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 body {
   background-image: url('./SDD-General.png');
   background-size: cover;
 }
-
-.App {
-}
-
 .Timers {
   height: 73vh;
   display: flex;
   flex-direction: column;
 }
-/* .Compass, .Summary {
-  height: 100%;
-  background-color: black;
-  border-radius: 10px;
+.LoadTimer {
+  margin: 1vh 1vh 0 1vh;
   border: 1px solid white;
+  border-radius: 10px;
+  opacity: 0.7;
+  flex: 1;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.LoadTimer > div {
+  padding: 1vh;
+  border: 1px solid white;
+}
+.LoadTimer > .title {
+  font-weight: bold;
+}
+.LoadTimer > .time {
+  flex: 1;
+  text-align: center;
+  font-size: 3em;
+}
+.LoadTimer > .slots {
+  text-align: right;
+}
+.WeatherSection {
+  height: 25vh;
+  display: flex;
+  margin-top: 1vh;
+  width: 100%;
+}
+.WeatherSection > div {
+  background-color: black;
   color: white;
   opacity: 0.7;
   font-weight: bold;
-} */
-.BigLogo {
+}
+.WeatherSection > .Summary {
+  padding: 1ch 0 0 1ch;
+  flex: 1;
+}
+.svg-content {
+  height: 95%;
+}
+.Summary > table {
+  padding: 0;
+  margin: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(logo.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
+  border-collapse: collapse;
+}
+.Summary > table > tbody > tr > td {
+  border-bottom: 1px solid #333;
+  padding: 3px;
+  margin: 0;
+}
+.Summary > table > tbody > tr > td:first-child {
+  width: 33%;
 }

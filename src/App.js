@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App2.css';
+import './App.css';
 import data from './data.json';
 import mapDataToState from './mapDataToState'
 import Timers from './Timers'
