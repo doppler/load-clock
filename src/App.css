@@ -28,19 +28,25 @@ body {
   flex-direction: column;
 }
 .LoadTimer > div {
-  padding: 1vh;
-  border: 1px solid white;
+  /* padding: 1vh;
+  border: 1px solid white; */
 }
-.LoadTimer > .title {
+.LoadTimer > .header {
+  padding: 5px 5px 0 5px;
+  border-bottom: 1px solid white;
+}
+.LoadTimer > .header > .title {
+  display: inline-block;
   font-weight: bold;
+}
+.LoadTimer > .header > .slots {
+  float: right;
+  text-align: right;
 }
 .LoadTimer > .time {
   flex: 1;
   text-align: center;
   font-size: 3em;
-}
-.LoadTimer > .slots {
-  text-align: right;
 }
 .WeatherSection {
   height: 25vh;
