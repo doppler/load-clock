@@ -1,4 +1,5 @@
 import React from 'react';
+import format from 'date-fns/format'
 
 const directionStringFromDirection = (direction) => {
   const dirs = [
@@ -12,7 +13,7 @@ const directionStringFromDirection = (direction) => {
   return dirs[index];
 }
 
-const Summary = ({winds, weather, loadsFlownToday}) => {
+const Summary = ({winds, weather, loadsFlownToday, lastUpdate}) => {
   let directionString = directionStringFromDirection(winds.direction);
   return (
     <div className="Summary">
@@ -41,6 +42,10 @@ const Summary = ({winds, weather, loadsFlownToday}) => {
           <tr>
             <td>Loads Flown Today</td>
             <td>{loadsFlownToday}</td>
+          </tr>
+          <tr>
+            <td>Last Update</td>
+            <td>{format(lastUpdate, 'MM/DD/YY h:mm:ss A')}</td>
           </tr>
         </tbody>
       </table>

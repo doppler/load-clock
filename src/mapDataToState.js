@@ -1,3 +1,5 @@
+import parse from 'date-fns/parse'
+
 const mapDataToState = (data) => {
   let tm1_enabled, tm1_load, tm1_timer, tm1_backgroundColor, tm1_foregroundColor;
   let tm2_enabled, tm2_load, tm2_timer, tm2_backgroundColor, tm2_foregroundColor;
@@ -8,7 +10,7 @@ const mapDataToState = (data) => {
   let windDir, currentWind;
   let g1, g5, g10, g20;
   let h5, h10, h20, h1;
-  let lastUpdateW;
+  let lastUpdate;
   let temp, humidity, heatindex, raininches, windDirString;
   /* eslint-enable */
   let tm1_slots, tm2_slots, tm3_slots, tm4_slots;
@@ -22,7 +24,7 @@ const mapDataToState = (data) => {
     windDir, currentWind,
     g1, g5, g10, g20,
     h5, h10, h20, h1,
-    lastUpdateW,
+    lastUpdate,
     temp, humidity, heatindex, raininches, windDirString,
     tm1_slots, tm2_slots, tm3_slots, tm4_slots,
     ...rest
@@ -83,7 +85,8 @@ const mapDataToState = (data) => {
     timers,
     winds,
     weather,
-    loadsFlownToday,
+    loadsFlownToday: Number(loadsFlownToday),
+    lastUpdate: parse(lastUpdate),
     prevWindDirections: []
   }
   return organizedData
