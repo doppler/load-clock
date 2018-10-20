@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
-import data from './data.json';
-import mapDataToState from './mapDataToState'
-import Timers from './Timers'
-import WeatherSection from './WeatherSection'
+import React, { Component } from "react";
+import "./App.css";
+import data from "./data.json";
+import mapDataToState from "./mapDataToState";
+import Timers from "./Timers";
+import WeatherSection from "./WeatherSection";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = mapDataToState(data.d)
+    this.state = mapDataToState(data.d);
   }
 
   componentDidMount() {
@@ -18,11 +18,10 @@ class App extends Component {
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
-      body: JSON.stringify({param:"data",db:"Houston"})
-
+      body: JSON.stringify({ param: "data", db: "Houston" })
     })
-    .then(response => response.json())
-    .then(json => this.setState(mapDataToState(json.d)))
+      .then(response => response.json())
+      .then(json => this.setState(mapDataToState(json.d)));
 
     // window.setInterval(() => {
     //   this.setState(prevState => ({
@@ -40,8 +39,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Timers timers={this.state.timers}/>
-        <WeatherSection {...this.state}/>
+        <Timers timers={this.state.timers} />
+        <WeatherSection {...this.state} />
       </div>
     );
   }

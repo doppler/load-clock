@@ -1,8 +1,9 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
-  background-image: url('./SDD-General.png');
+  background-image: url("./SDD-General.png");
   background-size: cover;
 }
 .Timers {
@@ -11,7 +12,7 @@ body {
   flex-direction: column;
 }
 .BigLogo {
-  background-image: url('./logo.png');
+  background-image: url("./logo.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;

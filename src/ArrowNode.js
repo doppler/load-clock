@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const ArrowNode = ({direction, index}) => {
-  const fill = index === 0 ? "rgba(0, 255, 0, 1)" : "rgba(255, 255, 0, 0.1)"
+const ArrowNode = ({ direction, index }) => {
+  const fill = index === 0 ? "rgba(0, 255, 0, 1)" : "rgba(255, 255, 0, 0.1)";
   return (
     <g id="g_dir">
       <path
@@ -11,7 +11,7 @@ const ArrowNode = ({direction, index}) => {
         id={`dir-${index}`}
       />
     </g>
-  )
-}
+  );
+};
 
 export default ArrowNode;

@@ -1,19 +1,32 @@
-import React from 'react';
-import format from 'date-fns/format'
+import React from "react";
+import format from "date-fns/format";
 
-const directionStringFromDirection = (direction) => {
+const directionStringFromDirection = direction => {
   const dirs = [
-    'N', 'NNE', 'NE', 'ENE',
-    'E', 'ESE', 'SE', 'SSE',
-    'S', 'SSW', 'SW', 'WSW',
-    'W', 'WNW', 'NW', 'NNW'
+    "N",
+    "NNE",
+    "NE",
+    "ENE",
+    "E",
+    "ESE",
+    "SE",
+    "SSE",
+    "S",
+    "SSW",
+    "SW",
+    "WSW",
+    "W",
+    "WNW",
+    "NW",
+    "NNW"
   ];
-  const directionModulo = direction %= 360;
-  const index = Math.round(((directionModulo) < 0 ? direction + 360 : direction) / 22.5) % 16;
+  const directionModulo = (direction %= 360);
+  const index =
+    Math.round((directionModulo < 0 ? direction + 360 : direction) / 22.5) % 16;
   return dirs[index];
-}
+};
 
-const Summary = ({winds, weather, loadsFlownToday, lastUpdate}) => {
+const Summary = ({ winds, weather, loadsFlownToday, lastUpdate }) => {
   let directionString = directionStringFromDirection(winds.direction);
   return (
     <div className="Summary">
@@ -21,11 +34,16 @@ const Summary = ({winds, weather, loadsFlownToday, lastUpdate}) => {
         <tbody>
           <tr>
             <td>Temperature</td>
-            <td>{weather.temp}&deg;F</td>
+            <td>
+              {weather.temp}
+              &deg;F
+            </td>
           </tr>
           <tr>
             <td>Wind Direction</td>
-            <td>{directionString} ( {winds.direction} &deg; )</td>
+            <td>
+              {directionString} ( {winds.direction} &deg; )
+            </td>
           </tr>
           <tr>
             <td>5m High</td>
@@ -45,11 +63,11 @@ const Summary = ({winds, weather, loadsFlownToday, lastUpdate}) => {
           </tr>
           <tr>
             <td>Last Update</td>
-            <td>{format(lastUpdate, 'MM/DD/YY h:mm:ss A')}</td>
+            <td>{format(lastUpdate, "MM/DD/YY h:mm:ss A")}</td>
           </tr>
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 export default Summary;

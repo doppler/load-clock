@@ -1,8 +1,5 @@
-import React from 'react'
-// import './BigLogo.css'
+import React from "react";
 
-const BigLogo = () =>
-  <div className="BigLogo">
-  </div>
+const BigLogo = () => <div className="BigLogo" />;
 
-export default BigLogo
+export default BigLogo;
