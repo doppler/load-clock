@@ -103,7 +103,7 @@ const mapDataToState = data => {
       foregroundColor: tm1_foregroundColor
     },
     {
-      enabled: tm2_enabled === "True",
+      enabled: tm2_enabled.toLowerCase() === "true",
       load: tm2_load,
       time: tm2_timer,
       slots: tm2_slots,
@@ -111,7 +111,7 @@ const mapDataToState = data => {
       foregroundColor: tm2_foregroundColor
     },
     {
-      enabled: tm3_enabled === "True",
+      enabled: tm3_enabled.toLowerCase() === "true",
       load: tm3_load,
       time: tm3_timer,
       slots: tm3_slots,
@@ -119,7 +119,7 @@ const mapDataToState = data => {
       foregroundColor: tm3_foregroundColor
     },
     {
-      enabled: tm4_enabled === "True",
+      enabled: tm4_enabled.toLowerCase() === "true",
       load: tm4_load,
       time: tm4_timer,
       slots: tm4_slots,

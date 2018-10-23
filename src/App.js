@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   fetchDataAndUpdateState() {
-    fetch("https://houston.spacelandclock.com/clock5.aspx/getTimerInfo", {
+    fetch("http://houston.spacelandclock.com/clock5.aspx/getTimerInfo", {
       method: "POST",
       mode: "cors",
       headers: {
