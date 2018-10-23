@@ -183,6 +183,8 @@ const Compass = ({ winds, prevWindDirections }) => {
               );
             })}
 
+            <ArrowNode direction={winds.direction} current={true} />
+
             <text
               fontSize="15"
               fontFamily="Sans-serif"
