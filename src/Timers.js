@@ -1,5 +1,5 @@
 import React from "react";
-import LoadTimer from "./LoadTimer";
+import Timer from "./Timer";
 import BigLogo from "./BigLogo";
 
 const Timers = ({ timers }) => {
@@ -9,7 +9,7 @@ const Timers = ({ timers }) => {
         timers.map(
           (timer, i) =>
             timer.enabled === true ? (
-              <LoadTimer
+              <Timer
                 key={i}
                 load={timer.load}
                 time={timer.time}

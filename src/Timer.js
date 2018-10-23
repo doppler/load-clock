@@ -1,9 +1,9 @@
 import React from "react";
-// import './LoadTimer.css'
+// import './Timer.css'
 
-const LoadTimer = ({ load, time, slots, backgroundColor, foregroundColor }) => (
+const Timer = ({ load, time, slots, backgroundColor, foregroundColor }) => (
   <div
-    className="LoadTimer"
+    className="Timer"
     style={{ backgroundColor: backgroundColor, color: foregroundColor }}
   >
     <div className="header">
@@ -14,4 +14,4 @@ const LoadTimer = ({ load, time, slots, backgroundColor, foregroundColor }) => (
   </div>
 );
 
-export default LoadTimer;
+export default Timer;
