@@ -46,15 +46,15 @@ const Summary = ({ winds, weather, loadsFlownToday, lastUpdate }) => {
             </td>
           </tr>
           <tr>
-            <td>5m High</td>
+            <td>5 min High</td>
             <td>{winds.high_5min} mph</td>
           </tr>
           <tr>
-            <td>10m High</td>
+            <td>10 min High</td>
             <td>{winds.high_10min} mph</td>
           </tr>
           <tr>
-            <td>20m High</td>
+            <td>20 min High</td>
             <td>{winds.high_20min} mph</td>
           </tr>
           <tr>
