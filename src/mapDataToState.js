@@ -129,6 +129,7 @@ const mapDataToState = data => {
   ].filter(timer => timer.enabled === true);
 
   const organizedData = {
+    locationId: "Houston",
     timers,
     winds,
     weather,

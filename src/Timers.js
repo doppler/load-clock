@@ -2,7 +2,7 @@ import React from "react";
 import Timer from "./Timer";
 import BigLogo from "./BigLogo";
 
-const Timers = ({ timers }) => {
+const Timers = ({ timers, locationId }) => {
   return (
     <div className="Timers">
       {timers.length > 0 ? (
@@ -14,10 +14,11 @@ const Timers = ({ timers }) => {
             slots={timer.slots}
             backgroundColor={timer.backgroundColor}
             foregroundColor={timer.foregroundColor}
+            locationId={locationId}
           />
         ))
       ) : (
-        <BigLogo />
+        <BigLogo locationId={locationId} />
       )}
     </div>
   );

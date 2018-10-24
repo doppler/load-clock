@@ -12,7 +12,7 @@ body {
   flex-direction: column;
 }
 .BigLogo {
-  background-image: url("./logos/logo-Dallas.svg");
+  /* background-image: url("./logos/logo-Dallas.svg"); */
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: auto;
