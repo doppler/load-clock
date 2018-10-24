@@ -8,8 +8,8 @@ body {
 }
 .Timers {
   height: 80vh;
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 }
 .BigLogo {
   /* background-image: url("./logos/logo-Dallas.svg"); */

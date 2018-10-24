@@ -40,7 +40,7 @@ class App extends Component {
 
   componentDidMount() {
     const params = new URL(window.location.href).searchParams;
-    this.setState({ locationId: params.get("locationId") });
+    this.setState({ locationId: params.get("locationId") || "Houston" });
 
     window.setInterval(() => this.fetchDataAndUpdateState(), 1000);
     // window.setInterval(() => {
