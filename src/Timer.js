@@ -20,11 +20,17 @@ const Timer = ({
     >
       <div className="header">
         <div className="title">{load}</div>
-        <div className="slots">Slots Remaining: {slots}</div>
+        <div className="slots">Slots: {slots}</div>
       </div>
       <div
         className="time"
-        style={{ fontSize: `${(50 - timerCount) / timerCount}vh` }}
+        style={{
+          // huge hack to try to adjust font size based on # of divs
+          // gotta keep small screens in mind, too
+          fontSize: `${(80 - timerCount * 2) /
+            timerCount /
+            (3.75 - 0.25 * timerCount)}vh`
+        }}
       >
         {time}
       </div>
