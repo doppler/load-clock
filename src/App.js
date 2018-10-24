@@ -5,6 +5,8 @@ import mapDataToState from "./mapDataToState";
 import Timers from "./Timers";
 import WeatherSection from "./WeatherSection";
 
+const TEST = false;
+
 class App extends Component {
   constructor() {
     super();
@@ -42,21 +44,24 @@ class App extends Component {
     const params = new URL(window.location.href).searchParams;
     this.setState({ locationId: params.get("locationId") || "Houston" });
 
-    window.setInterval(() => this.fetchDataAndUpdateState(), 1000);
-    // window.setInterval(() => {
-    //   this.setState(prevState => ({
-    //     ...prevState,
-    //     winds: {
-    //       ...prevState.winds,
-    //       direction: prevState.winds.direction + 1,
-    //       speed: prevState.winds.speed + 1
-    //     },
-    //     prevWindDirections: [
-    //       prevState.winds.direction,
-    //       ...this.state.prevWindDirections
-    //     ].slice(0, 240)
-    //   }));
-    // }, 1000);
+    if (TEST) {
+      window.setInterval(() => {
+        this.setState(prevState => ({
+          ...prevState,
+          winds: {
+            ...prevState.winds,
+            direction: prevState.winds.direction + 1,
+            speed: prevState.winds.speed + 1
+          },
+          prevWindDirections: [
+            prevState.winds.direction,
+            ...this.state.prevWindDirections
+          ].slice(0, 240)
+        }));
+      }, 1000);
+    } else {
+      window.setInterval(() => this.fetchDataAndUpdateState(), 1000);
+    }
   }
 
   render() {

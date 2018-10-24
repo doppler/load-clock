@@ -3,8 +3,9 @@ import Timer from "./Timer";
 import BigLogo from "./BigLogo";
 
 const Timers = ({ timers, locationId }) => {
+  const logo = require(`./logos/logo-${locationId}.svg`);
   return (
-    <div className="Timers">
+    <div className="Timers" style={{ backgroundImage: `url(${logo})` }}>
       {timers.length > 0 ? (
         timers.map((timer, i) => (
           <Timer
@@ -15,7 +16,6 @@ const Timers = ({ timers, locationId }) => {
             timerCount={timers.length}
             backgroundColor={timer.backgroundColor}
             foregroundColor={timer.foregroundColor}
-            locationId={locationId}
           />
         ))
       ) : (

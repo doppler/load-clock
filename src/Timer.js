@@ -7,15 +7,12 @@ const Timer = ({
   slots,
   backgroundColor,
   foregroundColor,
-  timerCount,
-  locationId
+  timerCount
 }) => {
-  const logo = require(`./logos/logo-${locationId}.svg`);
   return (
     <div
       className="Timer"
       style={{
-        backgroundImage: `url(${logo})`,
         backgroundColor: backgroundColor,
         color: foregroundColor,
         height: `${(80 - timerCount * 1.25) / timerCount}vh`
