@@ -12,6 +12,7 @@ const Timers = ({ timers, locationId }) => {
             load={timer.load}
             time={timer.time}
             slots={timer.slots}
+            timerCount={timers.length}
             backgroundColor={timer.backgroundColor}
             foregroundColor={timer.foregroundColor}
             locationId={locationId}
