@@ -12,14 +12,14 @@ body {
   flex-direction: column;
 }
 .BigLogo {
-  background-image: url("./logos/logo-Atlanta.svg");
+  background-image: url("./logos/logo-Dallas.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: auto;
   flex: 1;
 }
 .Timer {
-  background-image: url("./logos/logo-Atlanta.svg");
+  background-image: url("./logos/logo-Dallas.svg");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: contain;
