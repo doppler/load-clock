@@ -12,18 +12,23 @@ class App extends Component {
   }
 
   fetchDataAndUpdateState() {
-    fetch("http://houston.spacelandclock.com/clock5.aspx/getTimerInfo", {
-      method: "POST",
+    // fetch("http://houston.spacelandclock.com/clock5.aspx/getTimerInfo", {
+    //   method: "POST",
+    //   mode: "cors",
+    //   headers: {
+    //     "Content-Type": "application/json; charset=utf-8"
+    //   },
+    //   body: JSON.stringify({ param: "data", db: "Dallas" })
+    // })
+    fetch("https://a0lpb24ek3.execute-api.us-east-1.amazonaws.com/dev", {
       mode: "cors",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      body: JSON.stringify({ param: "data", db: "Dallas" })
+      headers: { "Content-Type": "application/json" }
     })
       .then(response => response.json())
       // .then(json => this.setState(mapDataToState(json.d)));
       .then(json => {
-        const newState = mapDataToState(json.d);
+        // const newState = mapDataToState(json.d);
+        const newState = json;
         this.setState(prevState => ({
           timers: newState.timers,
           winds: newState.winds,
