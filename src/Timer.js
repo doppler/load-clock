@@ -29,7 +29,7 @@ const Timer = ({
           // gotta keep small screens in mind, too
           fontSize: `${(80 - timerCount * 2) /
             timerCount /
-            (3.75 - 0.25 * timerCount)}vh`
+            (3.75 - 0.15 * timerCount)}vh`
         }}
       >
         {time}
