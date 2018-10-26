@@ -1,5 +1,5 @@
 import React from "react";
-// import './Timer.css'
+import propTypes from "prop-types";
 
 const Timer = ({
   load,
@@ -37,4 +37,14 @@ const Timer = ({
     </div>
   );
 };
+
+Timer.propTypes = {
+  load: propTypes.string.isRequired,
+  time: propTypes.string.isRequired,
+  slots: propTypes.number.isRequired,
+  backgroundColor: propTypes.string.isRequired,
+  foregroundColor: propTypes.string.isRequired,
+  timerCount: propTypes.number.isRequired
+};
+
 export default Timer;

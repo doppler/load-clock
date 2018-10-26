@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 import Compass from "./Compass";
 import Summary from "./Summary";
 
@@ -19,5 +20,13 @@ const WeatherSection = ({
     />
   </div>
 );
+
+WeatherSection.propTypes = {
+  winds: propTypes.object.isRequired,
+  prevWindDirections: propTypes.array.isRequired,
+  weather: propTypes.object.isRequired,
+  loadsFlownToday: propTypes.number.isRequired,
+  lastUpdate: propTypes.instanceOf(Date).isRequired
+};
 
 export default WeatherSection;

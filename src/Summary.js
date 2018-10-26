@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 import format from "date-fns/format";
 
 const directionStringFromDirection = direction => {
@@ -70,4 +71,12 @@ const Summary = ({ winds, weather, loadsFlownToday, lastUpdate }) => {
     </div>
   );
 };
+
+Summary.propTypes = {
+  winds: propTypes.object.isRequired,
+  weather: propTypes.object.isRequired,
+  loadsFlownToday: propTypes.number.isRequired,
+  lastUpdate: propTypes.instanceOf(Date).isRequired
+};
+
 export default Summary;

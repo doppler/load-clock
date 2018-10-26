@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 import Timer from "./Timer";
 
 const Timers = ({ timers, locationId }) => {
@@ -20,4 +21,8 @@ const Timers = ({ timers, locationId }) => {
   );
 };
 
+Timers.propTypes = {
+  timers: propTypes.array.isRequired,
+  locationId: propTypes.string.isRequired
+};
 export default Timers;

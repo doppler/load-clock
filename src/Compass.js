@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 import ArrowNode from "./ArrowNode";
 
 const Compass = ({ winds, prevWindDirections }) => {
@@ -177,9 +178,9 @@ const Compass = ({ winds, prevWindDirections }) => {
               id="svg_w"
             />
 
-            {prevWindDirections.map((direction, index) => {
+            {prevWindDirections.map((direction, i) => {
               return (
-                <ArrowNode key={index} direction={direction} index={index} />
+                <ArrowNode key={i} direction={direction} current={false} />
               );
             })}
 
@@ -253,4 +254,10 @@ const Compass = ({ winds, prevWindDirections }) => {
     </div>
   );
 };
+
+Compass.propTypes = {
+  winds: propTypes.object.isRequired,
+  prevWindDirections: propTypes.array.isRequired
+};
+
 export default Compass;

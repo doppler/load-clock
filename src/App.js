@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import data from "./data.json";
 import mapDataToState from "./mapDataToState";
+import parse from "date-fns/parse";
 import Timers from "./Timers";
 import WeatherSection from "./WeatherSection";
 
@@ -31,7 +32,7 @@ class App extends Component {
           winds: newState.winds,
           weather: newState.weather,
           loadsFlownToday: newState.loadsFlownToday,
-          lastUpdate: newState.lastUpdate,
+          lastUpdate: parse(newState.lastUpdate),
           prevWindDirections: [
             newState.winds.direction,
             ...this.state.prevWindDirections
