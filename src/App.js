@@ -19,7 +19,7 @@ class App extends Component {
       // `https://a0lpb24ek3.execute-api.us-east-1.amazonaws.com/dev/${
       //   this.state.locationId
       // }`,
-      `https://load-clock-poller.herokuapp.com/${this.state.locationId}`,
+      `https://load-clock-poller.herokuapp.com/clock/${this.state.locationId}`,
       {
         mode: "cors",
         headers: { "Content-Type": "application/json" }
